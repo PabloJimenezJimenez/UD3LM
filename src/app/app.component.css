@@ -1,0 +1,353 @@
+#principal{
+    margin: 0;
+    padding: 0;
+    width: 98vw;
+    height: max-content;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    /*Sirve para cambiar el estilo del texto por ejemplo quitar la ralla de debajo a los enlaces*/
+    text-decoration: none;
+    color: white;
+}
+
+img{
+  width: 20vh;
+  height: 20vh;  
+}
+h3{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/*--------------------------------CONTENEDOR PRINCIPAL-----------------------------------------------*/
+#relleno{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: black;
+    height: 10vh;
+} 
+#cabezera{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 48vw;
+    background-color: rgba(0, 0, 0, 0.521);
+    display: inline-block;
+    width: 50%;
+    height: 10vh;
+}
+#mQuat{
+    margin: 0;
+    padding: 0;
+    background-image:url("/assets/img/maseratiQuatropporte2.png");
+    width: 100%;
+    height: 100vh;
+}
+
+#RRPhan{
+    margin: 0;
+    padding: 0;
+    background-image: url("/assets/img/RRphantom2.png");
+    width: 100%;
+    height: 100vh;
+}
+
+#AMVant{
+    margin: 0;
+    padding: 0;
+    background-image: url("/assets/img/AMvantage2.png");
+    width: 100%;
+    height: 100vh;
+}
+#Marcas{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:"t t t"
+                        "a b c"
+                        "d e f";
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+#otros{
+    display: none;
+}
+#pie{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-areas: "a"
+                         "b"
+                         "c";
+}
+/*----------------------------CABEZERA--------------------*/
+#menu{
+    display: inline-block;
+    position: fixed;
+    background-color:hsla(0, 0%, 0%, 0.521);
+    width: 48vw;
+    height: 10vh;
+}
+#logo{
+    display: inline-block;
+    margin-left: 50%;
+    margin-top: 2vh;
+}
+/*---------------MARCAS----------------*/
+#t{
+    grid-area: t;
+    text-align: center;
+}
+#a{
+    grid-area: a;
+}
+#b{
+    grid-area: b;
+}
+#c{
+    grid-area: c;
+}
+#d{
+    grid-area: d;
+}
+#e{
+    grid-area: e;
+}
+#f{
+    grid-area: f;
+}
+
+/*------------------mQuat,RRPhan,AMVant----------------*/
+#mQuat,#RRPhan,#AMVant h3{
+    font-size: 5vh;
+}
+.botonMas{
+    position: relative;
+    top: 50vh;
+    left: 40%;
+    vertical-align: bottom;
+    font-size: 5vh;
+    width: max-content;
+    border: 1vh solid;
+    border-color: white;
+    background-color: transparent;
+}
+
+/*------------------------PIE-----------------------------*/
+#idioma img{
+    width: 3vh;
+    height: 3vh;
+    vertical-align: middle;
+    display: inline-block;
+}
+#idioma p{
+    display: inline-block;
+    vertical-align: middle;
+}
+#idioma{
+    grid-area: a;
+}
+#PolPriv{
+    grid-area: b;
+}
+#Direccion{
+    grid-area: c;
+}
+
+/*------------------------MENU MOVIL-------------------------------*/
+.desp_movil{
+    display: none;
+    
+}
+.menu_movil{
+    margin-left: 5vh;
+    margin-top: 3vh;
+}
+#menu:target .desp_movil{
+    background-color: rgba(0, 0, 0, 0.521);
+    display: block;
+    margin-top: 4.2vh;
+    width: 100%;
+    height: 100vh;
+}
+.close{
+    display: none;
+}
+#menu:target .open{
+    display: none;
+}
+
+#menu:target .close{
+    display: inline-block;
+}
+.desp_movil li{
+    display: block;
+    padding-top: 10%;
+}
+
+/*------------------------------------FOTO CABEZERA--------------------------*/
+#logo img{
+    width: 6vh;
+    height: 6vh;
+}
+
+/*------------------BOTON AREA CLIENTE-------------------------------*/
+#aC{
+    background-color: rgba(65, 65, 217, 0.801);
+    width: max-content;
+    border: solid 0.2vh;
+    display: none;
+}
+/*--------------------RELLENO---------------------------------------*/
+#relleno p{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*-----------------------------------------TABLET 768px-----------------------------------------------------*/
+@media screen and (min-width: 768px) {
+    /*------------------------------------MODIFICACION CONTENEDOR MQUAT----------------------------*/
+    #mQuat{
+        background-image: url("/assets/img/maseratiQuatropporte3.png");
+    }
+
+    /*----------------------------------MODIFICACION CONTENEDOR RRPHAN----------------------------*/
+    #RRPhan{
+        background-image: url("/assets/img/RRphantom3.png");
+    }
+
+    /*------------------------------------MODIFICACION CONTENEDOR AMVANT-------------------------*/
+    #AMVant{
+        background-image: url("/assets/img/AMvantage3.png");
+    }
+
+    /*------------------------------------MODIFICACION CONTENEDOR PIE------------------------------*/
+    #pie{
+        grid-template-areas: "a b c";
+        justify-items: center;
+    }
+
+    /*-------------------------------------MODIFICACIONES CONTENEDOR CABEZERA---------------------------*/
+    #aC{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        margin-left: 40%;
+        vertical-align: top;
+        margin-top: 2vh; 
+    }
+
+    #aC a{
+        font-size: 25px;
+    }
+    #logo{
+        margin-left: 0;
+    }
+    
+}
+
+/*---------------------------------------LAPTOP 1280px-------------------------------------------------------------------------*/
+@media screen and (min-width: 1280px){
+    
+    /*-------------------------------- MODIFICACIONES CONTENEDOR PRINCIPAL-----------------------------------------------*/
+    #mQuat{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        background-image:url("/assets/img/maseratiQuatropporte2.png");
+        width: 33%;
+        height: 60vh;
+    }
+    #RRPhan{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        background-image: url("/assets/img/RRphantom16_9.png");
+        width: 33%;
+        height: 60vh;
+    }
+    
+    #AMVant{
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+        display: inline-block;
+        background-image: url("/assets/img/AMvantage16_9.png");
+        width: 33%;
+        height: 60vh;
+    }
+    #Marcas{
+        margin: 0;
+        padding: 0;
+        height: 45vh;
+    }
+    #otros{
+        display: block;
+    }
+    #pie{
+        margin: 0;
+        padding: 0;
+        height: 10vh;
+    }
+    /*------------------MODIFICACIONES mQuat,RRPhan,AMVant----------------*/
+    #mQuat,#RRPhan,#AMVant h3{
+        font-size: 4vh;
+        text-align: center;
+    }
+    .botonMas{
+        position: relative;
+        top: 20vh;
+        left: 40%;
+        vertical-align: bottom;
+        font-size: 2vh;
+        width: max-content;
+        border: 1vh solid;
+        border-color: white;
+        background-color: transparent;
+    }
+
+    /*----------------------MODIFICACIONES Otros---------------------------*/
+    #otros ul{
+        margin: 0;
+        padding: 0;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        list-style: none;
+        display: grid;
+        grid-template-areas: "iz cent dcha";
+        justify-items: center;
+    }
+    #otros li{
+        font-size: 2vh;
+    }
+    /*-------------------------MODIFICACIONES PIE----------------------*/
+    #pie p{
+        font-size: 2vh;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+}
+
+
+/*-------------------------MOVIL PEQUEÑO-------------------------------*/
+@media screen and (max-width: 360px){
+    #Marcas{
+        margin: 0;
+        padding: 0;
+        grid-template-areas:"t t"
+                            "a b"
+                            "d e"
+                            "c f";
+    }
+}
